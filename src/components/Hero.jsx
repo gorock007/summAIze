@@ -3,8 +3,7 @@ import {logo} from '../assets'
 
 const Hero = () => {
   return (
-    <header className='w-full flex justify-center
-    items-center flex-col'>
+    <header className='w-full flex justify-center items-center flex-col px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto'>
       <nav className='flex justify-between items-center w-full pt-3 mb-10'>
         <div className='flex items-center'>
           <img src={logo} alt='SummAIze logo' className='w-8 h-6 object-contain' />
@@ -13,7 +12,7 @@ const Hero = () => {
 
         <button
           type='button'
-          onClick={() => window.open('https://github.com/username')}
+          onClick={() => window.open('https://github.com/gorock007/summAIze')}
           className='black_btn'>
             Github
         </button>

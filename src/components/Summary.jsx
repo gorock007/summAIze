@@ -21,13 +21,11 @@ const Summary = () => {
   const handleSubmit = async (e) =>{
     e.preventDefault();
     const { data } = await getSummary({ articleUrl: article.url});
-
     if(data?.summary){
       const newArticle = {...article, summary: data.summary };
       const updatedAllArticles = [newArticle, ...allArticles];
       setArticle(newArticle);
       setAllArticles(updatedAllArticles);
-      
       localStorage.setItem('articles', JSON.stringify(updatedAllArticles));
     }
   }
@@ -39,7 +37,7 @@ const Summary = () => {
   }
 
   return (
-    <section className='mt-16 w-full max-w-xl'>
+    <section className='mt-16 w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 mx-auto'>
       <div className='flex flex-col w-full gap-2'>
         {/* FORM SECTION */}
         <form className='relative flex justify-center items-start'
